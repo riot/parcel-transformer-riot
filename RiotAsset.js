@@ -9,7 +9,7 @@ class RiotAsset extends Asset {
   }
 
   async generate() {
-    const riotOpts = {};
+    const riotOpts = (await this.getConfig(['.riotrc', '.riotrc.js', 'riot.config.js'])) || {};
 
     let code = compile(this.contents, riotOpts, this.name);
     code = `${ preamble }${ code }`;
