@@ -21,6 +21,40 @@ require('./src/App.tag')
 riot.mount('*')
 ```
 
+## Configuration
+
+If you want compile your tags using custom riot compiler options you can create a `riot.config.js` in the root folder of your project
+
+```js
+export default {
+  // html parser
+  template: 'foo',
+  // js parser
+  type: 'baz',
+  // css parser
+  style: 'bar',
+  parsers: {
+    html: {
+      foo: (html, opts, url) => require('foo').compile(html)
+    },
+    css: {
+      bar: (tagName, css, opts, url) => require('bar').compile(css)
+    },
+    js: {
+      baz: (js, opts, url) => require('baz').compile(js)
+    }
+  },
+  // special options that may be used to extend
+  // the default riot parsers options
+  parserOptions: {
+    js: {},
+    template: {},
+    style: {}
+  }
+}
+
+```
+
 
 [travis-image]:  https://img.shields.io/travis/riot/parcel-plugin-riot.svg?style=flat-square
 [travis-url]:    https://travis-ci.org/riot/parcel-plugin-riot
