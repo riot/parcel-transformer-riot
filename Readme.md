@@ -28,7 +28,7 @@ riot.mount('*')
 [license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]:   LICENSE
 
-[npm-version-image]:   https://img.shields.io/npm/v/riot-parcel-plugin-riot.svg?style=flat-square
-[npm-downloads-image]: https://img.shields.io/npm/dm/riot-parcel-plugin-riot.svg?style=flat-square
-[npm-url]:             https://npmjs.org/package/riot-parcel-plugin-riot
+[npm-version-image]:   https://img.shields.io/npm/v/parcel-plugin-riot.svg?style=flat-square
+[npm-downloads-image]: https://img.shields.io/npm/dm/parcel-plugin-riot.svg?style=flat-square
+[npm-url]:             https://npmjs.org/package/parcel-plugin-riot
 
