@@ -14,8 +14,8 @@
     "url": "https://github.com/andruschka/parcel-plugin-riot"
   },
   "dependencies": {
-    "parcel-bundler": "^1.4.1",
-    "riot": "^3.8.1",
+    "parcel-bundler": "^1.12.3",
+    "riot": "^3.13.2",
     "riot-compiler": "^3.4.0"
   }
 }
