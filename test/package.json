@@ -1,0 +1,15 @@
+{
+  "name": "riot-parcel-test",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "postinstall": "parcel build index.html --no-cache"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.11.0"
+  },
+  "devDependencies": {
+    "@riotjs/compiler": "^4.0.0",
+    "@riotjs/parcel-plugin-riot": "file:../"
+  }
+}
