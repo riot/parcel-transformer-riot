@@ -1,27 +1,23 @@
 {
-  "name": "parcel-plugin-riot",
-  "version": "2.1.0",
+  "name": "@riotjs/parcel-plugin-riot",
+  "version": "4.0.0-alpha.1",
   "description": "A parcel plugin for riot.js",
   "main": "index.js",
   "scripts": {
-    "test": "npx eslint *.js"
-  },
-  "author": {
-    "name": "andruschka",
-    "url": "https://92digital.com"
+    "prepare": "npm i --no-save @riotjs/compiler",
+    "test": "npx eslint **/*.js"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/andruschka/parcel-plugin-riot"
   },
-  "dependencies": {
+  "peerDependencies": {
     "parcel-bundler": "^1.12.3",
-    "riot": "^3.13.2",
-    "riot-compiler": "^3.4.0"
+    "@riotjs/compiler": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-config-riot": "^2.0.0"
   }
 }

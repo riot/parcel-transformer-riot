@@ -7,18 +7,20 @@ A parcel plugin for riot.js
 
 ## Using
 Add parcel-plugin-riot to your project.
-```
-npm i parcel-plugin-riot
+
+```bash
+npm i -D @riotjs/parcel-plugin-riot @riotjs/compiler
 ```
 
 -> You are ready!
 
-```javascript
+```js
+import App from './src/App.riot'
+import {component} from 'riot'
 
-const riot = require('riot')
-require('./src/App.tag')
-
-riot.mount('*')
+component(App)(document.querySelector('#root'), {
+  message: 'Hello there'
+})
 ```
 
 ## Configuration
@@ -27,34 +29,18 @@ If you want compile your tags using custom riot compiler options you can create 
 
 ```js
 export default {
-  // html parser
-  template: 'foo',
-  // js parser
-  type: 'baz',
-  // css parser
-  style: 'bar',
-  parsers: {
-    html: {
-      foo: (html, opts, url) => require('foo').compile(html)
-    },
-    css: {
-      bar: (tagName, css, opts, url) => require('bar').compile(css)
-    },
-    js: {
-      baz: (js, opts, url) => require('baz').compile(js)
-    }
-  },
-  // special options that may be used to extend
-  // the default riot parsers options
-  parserOptions: {
-    js: {},
-    template: {},
-    style: {}
-  }
+  hot: false // set it to true if you are using hmr
+  // add here all the other @riotjs/compiler options riot.js.org/compiler
+  // template: 'pug' for example
 }
 
 ```
 
+If you want to enable hmr via `hot` option you will need to install also [`@riotjs/hot-reload`](https://www.npmjs.com/package/@riotjs/hot-reload)
+
+```bash
+npm i @riotjs/hot-reload -D
+```
 
 [travis-image]:  https://img.shields.io/travis/riot/parcel-plugin-riot.svg?style=flat-square
 [travis-url]:    https://travis-ci.org/riot/parcel-plugin-riot
