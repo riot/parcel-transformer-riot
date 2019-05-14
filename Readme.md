@@ -32,7 +32,7 @@ component(App)(document.querySelector('#root'), {
 If you want compile your tags using custom riot compiler options you can create a `riot.config.js` in the root folder of your project
 
 ```js
-export default {
+module.exports = {
   hot: false // set it to true if you are using hmr
   // add here all the other @riotjs/compiler options riot.js.org/compiler
   // template: 'pug' for example
