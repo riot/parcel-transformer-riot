@@ -26,7 +26,7 @@ riot.mount('*')
 If you want compile your tags using custom riot compiler options you can create a `riot.config.js` in the root folder of your project
 
 ```js
-export default {
+module.exports = {
   // html parser
   template: 'foo',
   // js parser
