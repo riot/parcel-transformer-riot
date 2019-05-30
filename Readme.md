@@ -52,7 +52,7 @@ npm i @riotjs/hot-reload -D
 [license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]:   LICENSE
 
-[npm-version-image]:   https://img.shields.io/npm/v/parcel-plugin-riot.svg?style=flat-square
-[npm-downloads-image]: https://img.shields.io/npm/dm/parcel-plugin-riot.svg?style=flat-square
-[npm-url]:             https://npmjs.org/package/parcel-plugin-riot
+[npm-version-image]:   https://img.shields.io/npm/v/@riotjs/parcel-plugin-riot.svg?style=flat-square
+[npm-downloads-image]: https://img.shields.io/npm/dm/@riotjs/parcel-plugin-riot.svg?style=flat-square
+[npm-url]:             https://npmjs.org/package/@riotjs/parcel-plugin-riot
 
