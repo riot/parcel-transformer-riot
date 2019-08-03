@@ -37,7 +37,30 @@ module.exports = {
   // add here all the other @riotjs/compiler options riot.js.org/compiler
   // template: 'pug' for example
 }
+```
 
+If you want to use `pug` as your template engine, your `riot.config.js` might look like this
+
+```js
+const { registerPreprocessor } = require('@riotjs/compiler')
+const { render } = require('pug')
+
+// register the pug preprocessor
+registerPreprocessor('template', 'pug', (code, options) => {
+  const { file } = options
+
+  return {
+    code: render(code, {
+      filename: file,
+      pretty: true,
+      doctype: 'html'
+    })
+  }
+})
+
+module.exports = {
+  template: 'pug'
+}
 ```
 
 If you want to enable hmr via `hot` option you will need to install also [`@riotjs/hot-reload`](https://www.npmjs.com/package/@riotjs/hot-reload)
