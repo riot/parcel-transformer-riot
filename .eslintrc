@@ -9,4 +9,4 @@ globals:
   expect: true
 
 rules:
-  fp/no-class: false
+  fp/no-class: off
