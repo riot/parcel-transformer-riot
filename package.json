@@ -4,6 +4,7 @@
   "description": "A parcel plugin for riot.js",
   "main": "index.js",
   "scripts": {
+    "prepare": "npm i --no-save @riotjs/compiler@5 parcel-bundler@1 @riotjs/hot-reload@5 riot@5",
     "test": "npx eslint *.js && npm run test-bundle",
     "test-bundle": "cd test && npm i"
   },
@@ -17,11 +18,7 @@
     "@riotjs/compiler": "^5.0.0"
   },
   "devDependencies": {
-    "@riotjs/compiler": "^5.0.0",
-    "@riotjs/hot-reload": "^5.0.0",
     "eslint": "^7.14.0",
-    "eslint-config-riot": "^3.0.0",
-    "parcel-bundler": "^1.12.4",
-    "riot": "^5.0.0"
+    "eslint-config-riot": "^3.0.0"
   }
 }
