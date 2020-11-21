@@ -1,6 +1,6 @@
 {
   "name": "@riotjs/parcel-plugin-riot",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "A parcel plugin for riot.js",
   "main": "index.js",
   "scripts": {
