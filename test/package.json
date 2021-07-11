@@ -11,7 +11,7 @@
   "devDependencies": {
     "@riotjs/compiler": "^4.0.0",
     "@riotjs/hot-reload": "^4.0.0-rc.1",
-    "riot": "^4.0.0-rc.13",
-    "@riotjs/parcel-plugin-riot": "file:../"
+    "@riotjs/parcel-plugin-riot": "file:../",
+    "riot": "^4.0.0-rc.13"
   }
 }

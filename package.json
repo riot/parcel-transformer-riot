@@ -14,11 +14,11 @@
     "url": "https://github.com/andruschka/parcel-plugin-riot"
   },
   "peerDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "@riotjs/compiler": "^5.0.0"
+    "@riotjs/compiler": "^6.0.0",
+    "parcel-bundler": "^1.9.4"
   },
   "devDependencies": {
-    "eslint": "^7.14.0",
+    "eslint": "^7.30.0",
     "eslint-config-riot": "^3.0.0"
   }
 }
