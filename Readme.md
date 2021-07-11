@@ -1,4 +1,4 @@
-[![Build Status][travis-image]][travis-url]
+[![Build Status][ci-image]][ci-url]
 [![NPM version][npm-version-image]][npm-url]
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
@@ -69,8 +69,9 @@ If you want to enable hmr via `hot` option you will need to install also [`@riot
 npm i @riotjs/hot-reload -D
 ```
 
-[travis-image]:  https://img.shields.io/travis/riot/parcel-plugin-riot.svg?style=flat-square
-[travis-url]:    https://travis-ci.org/riot/parcel-plugin-riot
+
+[ci-image]:https://img.shields.io/github/workflow/status/riot/parcel-plugin-riot/test?style=flat-square
+[ci-url]:https://github.com/riot/parcel-plugin-riot/actions
 
 [license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
 [license-url]:   LICENSE
