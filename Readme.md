@@ -7,7 +7,7 @@ A parcel plugin for riot.js
 
 ## Important
 
-- If you are using Parcel < 1.0.0 please check the [this branch](https://github.com/riot/parcel-transformer-riot/tree/parcel-v1)
+- If you are using Parcel < 2.0.0 please check the [this branch](https://github.com/riot/parcel-transformer-riot/tree/parcel-v1)
 - If you are using Riot.js < 4.0.0 please check the [v3 branch](https://github.com/riot/parcel-transformer-riot/tree/v3)
 
 ## Using
