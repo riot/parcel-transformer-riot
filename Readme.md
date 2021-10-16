@@ -7,13 +7,26 @@ A parcel plugin for riot.js
 
 ## Important
 
-If you are using Riot.js < 4.0.0 please check the [v3 branch](https://github.com/riot/parcel-plugin-riot/tree/v3)
+- If you are using Parcel < 1.0.0 please check the [this branch](https://github.com/riot/parcel-plugin-riot/tree/parcel-v1)
+- If you are using Riot.js < 4.0.0 please check the [v3 branch](https://github.com/riot/parcel-plugin-riot/tree/v3)
 
 ## Using
-Add parcel-plugin-riot to your project.
+
+### 1. Add the riot parcel transformer to your project.
 
 ```bash
-npm i -D @riotjs/parcel-plugin-riot @riotjs/compiler
+npm i -D @riotjs/parcel-transformer-riot @riotjs/compiler
+```
+
+### 2. Configure your .parcelrc file 
+
+```json
+{
+	"extends": "@parcel/config-default",
+	"transformers": {
+		"*.riot": ["@riotjs/parcel-transformer-riot"]
+	}
+}
 ```
 
 -> You are ready!
