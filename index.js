@@ -23,14 +23,14 @@ function hotReload(path) {
 
 module.exports = new Transformer({
   async loadConfig({config}) {
-    const { contents } = await config.getConfig(
+    const riotConfig = await config.getConfig(
       ['.riotrc', '.riotrc.js', 'riot.config.js'],
       {
         packageKey: 'riot'
       }
     )
 
-    return contents || {}
+    return riotConfig?.contents ?? {}
   },
   async transform({asset, config, options}) {
     const source = await asset.getCode()
@@ -41,14 +41,10 @@ module.exports = new Transformer({
       ...config
     })
 
-
     asset.type = 'js'
-    asset.setCode(`${code}${config.hot ? hotReload(relative(options.projectRoot, asset.filePath)) : ''}`)
+    asset.setCode(`${code}${config?.hot ? hotReload(relative(options.projectRoot, asset.filePath)) : ''}`)
     asset.setMap(sourceMap.addVLQMap(map))
 
     return [asset]
   }
 })
-
-
-
