@@ -4,6 +4,9 @@
   "scripts": {
     "postinstall": "parcel build index.html --no-cache"
   },
+  "alias": {
+    "./test/*.riot": "./$1"
+  },
   "dependencies": {
    "riot": "^6.0.0",
     "@riotjs/hot-reload": "^6.0.0"
