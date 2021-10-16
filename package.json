@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andruschka/parcel-plugin-riot"
+    "url": "https://github.com/riot/parcel-plugin-riot"
   },
   "peerDependencies": {
     "@riotjs/compiler": "^6.0.0"
