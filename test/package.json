@@ -5,12 +5,13 @@
     "postinstall": "parcel build index.html --no-cache"
   },
   "dependencies": {
-    "parcel": "^2.0.0"
+   "riot": "^6.0.0",
+    "@riotjs/hot-reload": "^6.0.0"
   },
   "devDependencies": {
+    "parcel": "^2.0.0",
+    "@parcel/config-default": "^2.0.0",
     "@riotjs/compiler": "^6.0.0",
-    "@riotjs/hot-reload": "^6.0.0",
-    "@riotjs/parcel-transformer-riot": "file:../",
-    "riot": "^6.0.0"
+    "@riotjs/parcel-transformer-riot": "file:../"
   }
 }
