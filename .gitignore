@@ -1,4 +1,5 @@
 node_modules
+/test/.parcel-cache/
 /test/package-lock.json
 /test/dist
 .idea

@@ -1,3 +1,5 @@
+import { component } from 'riot'
 import MyComponent from './my-component.riot'
 
-export default MyComponent
+
+component(MyComponent)(document.getElementById('root'))
