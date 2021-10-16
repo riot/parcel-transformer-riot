@@ -3,7 +3,9 @@
 [![NPM downloads][npm-downloads-image]][npm-url]
 [![MIT License][license-image]][license-url]
 
-A parcel plugin for riot.js
+The Riot.js official parcel transformer.
+
+🚧 Parcel 2 was just released and this package is still under development and not yet 100% ready. Come back soon
 
 ## Important
 
