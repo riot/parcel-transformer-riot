@@ -5,8 +5,6 @@
 
 The Riot.js official parcel transformer.
 
-🚧 Parcel 2 was just released and this package is still under development and not yet 100% ready. Come back soon
-
 ## Important
 
 - If you are using Parcel < 2.0.0 please check the [this branch](https://github.com/riot/parcel-transformer-riot/tree/parcel-v1)
