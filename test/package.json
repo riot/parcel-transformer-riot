@@ -8,7 +8,8 @@
     "./test/*.riot": "./$1"
   },
   "dependencies": {
-   "riot": "^6.1.2",
+    "riot": "^6.1.2",
+    "@riotjs/lazy": "^2.0.1",
     "@riotjs/hot-reload": "^6.0.0"
   },
   "devDependencies": {

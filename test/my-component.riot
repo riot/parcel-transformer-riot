@@ -1,8 +1,14 @@
 <my-component>
   <p>{message}</p>
+  <sub-component/>
 
   <script>
+    import lazy from '@riotjs/lazy'
+
     export default {
+      components: {
+        SubComponent: lazy(() => import('./sub-component.riot'))
+      },
       message: 'hello world'
     }
   </script>
