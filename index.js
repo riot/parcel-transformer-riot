@@ -26,12 +26,12 @@ function hotReload(path) {
 
 module.exports = new Transformer({
   async loadConfig({config}) {
-    const riotConfig = await config.getConfig(
+    const riotConfig = (await config.getConfig(
       CONFIG_FILES,
       {
         packageKey: PACKAGE_KEY
       }
-    )
+    )) || {}
     const shouldInvalidateOnStartup = riotConfig &&
       riotConfig.filePath.endsWith('.js') ||
       riotConfig.filePath.endsWith(CONFIG_FILES[0])
@@ -40,9 +40,9 @@ module.exports = new Transformer({
       config.invalidateOnStartup()
     }
 
-    return (riotConfig || {}).contents ? (riotConfig || {}).contents : {}
+    return riotConfig.contents || {}
   },
-  async transform({asset, config, options}) {
+  async transform({asset, config = {}, options}) {
     const source = await asset.getCode()
     const sourceMap = new SourceMap(options.projectRoot)
 
@@ -52,7 +52,7 @@ module.exports = new Transformer({
     })
 
     // the suffix will be added only for the HMR
-    const suffix = (config || {}).hot ? hotReload(basename(asset.filePath)) : ''
+    const suffix = config.hot ? hotReload(basename(asset.filePath)) : ''
 
     asset.type = 'js'
     asset.setCode(`${code}${suffix}`)
