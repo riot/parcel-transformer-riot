@@ -1,8 +1,12 @@
 <my-component>
   <p>{message}</p>
+  <sub-component/>
 
   <script>
     export default {
+      components: {
+        SubComponent: import('./sub-component.riot')
+      },
       message: 'hello world'
     }
   </script>
