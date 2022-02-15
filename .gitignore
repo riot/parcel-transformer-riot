@@ -3,3 +3,4 @@ node_modules
 /test/package-lock.json
 /test/dist
 .idea
+.DS_Store
