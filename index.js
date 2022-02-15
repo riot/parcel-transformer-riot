@@ -40,7 +40,7 @@ module.exports = new Transformer({
       config.invalidateOnStartup()
     }
 
-    return riotConfig?.contents ?? {}
+    return (riotConfig || {}).contents ? (riotConfig || {}).contents : {}
   },
   async transform({asset, config, options}) {
     const source = await asset.getCode()
@@ -50,9 +50,9 @@ module.exports = new Transformer({
       file: asset.filePath,
       ...config
     })
-    
+
     // the suffix will be added only for the HMR
-    const suffix = config?.hot ? hotReload(basename(asset.filePath)) : ''
+    const suffix = (config || {}).hot ? hotReload(basename(asset.filePath)) : ''
 
     asset.type = 'js'
     asset.setCode(`${code}${suffix}`)
