@@ -83,7 +83,7 @@ npm i @riotjs/hot-reload -D
 ```
 
 
-[ci-image]:https://img.shields.io/github/workflow/status/riot/parcel-transformer-riot/test?style=flat-square
+[ci-image]:https://img.shields.io/github/actions/workflow/status/riot/parcel-transformer-riot/test.yml?style=flat-square
 [ci-url]:https://github.com/riot/parcel-transformer-riot/actions
 
 [license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
