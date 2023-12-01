@@ -18,7 +18,7 @@ The Riot.js official parcel transformer.
 npm i -D @riotjs/parcel-transformer-riot @riotjs/compiler
 ```
 
-### 2. Configure your .parcelrc file 
+### 2. Configure your .parcelrc file
 
 ```json
 {
@@ -33,10 +33,10 @@ npm i -D @riotjs/parcel-transformer-riot @riotjs/compiler
 
 ```js
 import App from './src/App.riot'
-import {component} from 'riot'
+import { component } from 'riot'
 
 component(App)(document.querySelector('#root'), {
-  message: 'Hello there'
+  message: 'Hello there',
 })
 ```
 
@@ -45,8 +45,8 @@ component(App)(document.querySelector('#root'), {
 If you want compile your tags using custom riot compiler options you can create a `riot.config.js` in the root folder of your project
 
 ```js
-module.exports = {
-  hot: false // set it to true if you are using hmr
+export default {
+  hot: false, // set it to true if you are using hmr
   // add here all the other @riotjs/compiler options riot.js.org/compiler
   // template: 'pug' for example
 }
@@ -66,13 +66,13 @@ registerPreprocessor('template', 'pug', (code, options) => {
     code: render(code, {
       filename: file,
       pretty: true,
-      doctype: 'html'
-    })
+      doctype: 'html',
+    }),
   }
 })
 
 module.exports = {
-  template: 'pug'
+  template: 'pug',
 }
 ```
 

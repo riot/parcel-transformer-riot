@@ -1,8 +1,9 @@
-const { compile } = require('@riotjs/compiler')
-const  { Transformer } = require('@parcel/plugin')
-const SourceMap = require('@parcel/source-map').default
-const { basename } = require('path')
+import { compile } from '@riotjs/compiler'
+import { Transformer } from '@parcel/plugin'
+import sourceMap from '@parcel/source-map'
+import { basename } from 'path'
 
+const SourceMap = sourceMap.default
 const CONFIG_FILES = ['.riotrc', '.riotrc.js', 'riot.config.js']
 const PACKAGE_KEY = 'riot'
 
@@ -24,16 +25,14 @@ function hotReload(path) {
 })()`
 }
 
-module.exports = new Transformer({
-  async loadConfig({config}) {
-    const riotConfig = (await config.getConfig(
-      CONFIG_FILES,
-      {
-        packageKey: PACKAGE_KEY
-      }
-    )) || {}
-    const shouldInvalidateOnStartup = riotConfig &&
-      riotConfig.filePath.endsWith('.js') ||
+export default new Transformer({
+  async loadConfig({ config }) {
+    const riotConfig =
+      (await config.getConfig(CONFIG_FILES, {
+        packageKey: PACKAGE_KEY,
+      })) || {}
+    const shouldInvalidateOnStartup =
+      (riotConfig && riotConfig.filePath.endsWith('.js')) ||
       riotConfig.filePath.endsWith(CONFIG_FILES[0])
 
     if (shouldInvalidateOnStartup) {
@@ -42,13 +41,13 @@ module.exports = new Transformer({
 
     return riotConfig.contents || {}
   },
-  async transform({asset, config = {}, options}) {
+  async transform({ asset, config = {}, options }) {
     const source = await asset.getCode()
     const sourceMap = new SourceMap(options.projectRoot)
 
-    const {code, map} = compile(source, {
+    const { code, map } = compile(source, {
       file: asset.filePath,
-      ...config
+      ...config,
     })
 
     // the suffix will be added only for the HMR
@@ -59,5 +58,5 @@ module.exports = new Transformer({
     asset.setMap(sourceMap.addVLQMap(map))
 
     return [asset]
-  }
+  },
 })

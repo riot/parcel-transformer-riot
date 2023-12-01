@@ -3,11 +3,15 @@
   "version": "7.0.4",
   "description": "The Riot.js official parcel transformer",
   "main": "index.js",
+  "exports": {
+    "import": "./index.js"
+  },
   "scripts": {
-    "prepare": "npm i --no-save @riotjs/compiler@6 @riotjs/hot-reload@6 riot@6",
+    "prepare": "npm i --no-save @riotjs/compiler@9 @riotjs/hot-reload@9 riot@9",
     "test": "npx eslint *.js && npm run test-bundle",
     "test-bundle": "cd test && npm i"
   },
+  "type": "module",
   "engines": {
     "parcel": "2.x"
   },
@@ -17,14 +21,16 @@
     "url": "https://github.com/riot/parcel-plugin-riot"
   },
   "peerDependencies": {
-    "@riotjs/compiler": "^6.0.4"
+    "@riotjs/compiler": "^6.0.4 || ^9.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.9.0",
-    "eslint-config-riot": "^3.0.0"
+    "@riotjs/prettier-config": "^1.1.0",
+    "eslint": "^8.54.0",
+    "eslint-config-riot": "^4.1.1",
+    "prettier": "^3.1.0"
   },
   "dependencies": {
-    "@parcel/plugin": "^2.3.1",
-    "@parcel/source-map": "^2.0.2"
+    "@parcel/plugin": "^2.10.3",
+    "@parcel/source-map": "^2.1.1"
   }
 }

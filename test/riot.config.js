@@ -1,3 +1,3 @@
-module.exports = {
-  hot: true
+export default {
+  hot: true,
 }
