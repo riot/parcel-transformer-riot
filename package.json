@@ -3,9 +3,6 @@
   "version": "9.0.0",
   "description": "The Riot.js official parcel transformer",
   "main": "index.js",
-  "exports": {
-    "import": "./index.js"
-  },
   "scripts": {
     "prepare": "npm i --no-save @riotjs/compiler@9 @riotjs/hot-reload@9 riot@9",
     "test": "npx eslint *.js && npm run test-bundle",
