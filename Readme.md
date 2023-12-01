@@ -55,8 +55,8 @@ export default {
 If you want to use `pug` as your template engine, your `riot.config.js` might look like this
 
 ```js
-const { registerPreprocessor } = require('@riotjs/compiler')
-const { render } = require('pug')
+import { registerPreprocessor } from '@riotjs/compiler'
+import { render } from 'pug'
 
 // register the pug preprocessor
 registerPreprocessor('template', 'pug', (code, options) => {
@@ -71,7 +71,7 @@ registerPreprocessor('template', 'pug', (code, options) => {
   }
 })
 
-module.exports = {
+export default  {
   template: 'pug',
 }
 ```
