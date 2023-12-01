@@ -11,13 +11,11 @@
   "dependencies": {
     "riot": "^9.1.2",
     "@riotjs/lazy": "^9.0.0",
-    "@riotjs/hot-reload": "^9.0.0"
+    "@riotjs/hot-reload": "^9.0.1"
   },
   "devDependencies": {
     "@parcel/config-default": "^2.10.3",
     "@riotjs/compiler": "^9.0.6",
-    "@riotjs/parcel-transformer-riot": "file:../",
-    "parcel": "^2.10.3",
-    "process": "^0.11.10"
+    "parcel": "^2.10.3"
   }
 }
