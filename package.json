@@ -22,12 +22,12 @@
   },
   "devDependencies": {
     "@riotjs/prettier-config": "^1.1.0",
-    "eslint": "^8.55.0",
-    "eslint-config-riot": "^4.1.1",
-    "prettier": "^3.1.0"
+    "eslint": "^8.57.0",
+    "eslint-config-riot": "^4.1.2",
+    "prettier": "^3.2.5"
   },
   "dependencies": {
-    "@parcel/plugin": "^2.10.3",
+    "@parcel/plugin": "^2.12.0",
     "@parcel/source-map": "^2.1.1"
   }
 }

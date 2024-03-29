@@ -32,8 +32,8 @@ export default new Transformer({
         packageKey: PACKAGE_KEY,
       })) || {}
     const shouldInvalidateOnStartup =
-      (riotConfig && riotConfig.filePath.endsWith('.js')) ||
-      riotConfig.filePath.endsWith(CONFIG_FILES[0])
+      (riotConfig?.filePath?.endsWith('.js')) ||
+      riotConfig?.filePath?.endsWith(CONFIG_FILES[0])
 
     if (shouldInvalidateOnStartup) {
       config.invalidateOnStartup()
