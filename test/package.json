@@ -9,13 +9,13 @@
     "./test/*.riot": "./$1"
   },
   "dependencies": {
-    "riot": "^9.1.2",
-    "@riotjs/lazy": "^9.0.0",
-    "@riotjs/hot-reload": "^9.0.1"
+    "riot": "^10.0.0",
+    "@riotjs/lazy": "^10.0.0",
+    "@riotjs/hot-reload": "^10.0.0"
   },
   "devDependencies": {
     "@parcel/config-default": "^2.10.3",
-    "@riotjs/compiler": "^9.0.6",
+    "@riotjs/compiler": "^10.0.0",
     "parcel": "^2.10.3"
   }
 }
