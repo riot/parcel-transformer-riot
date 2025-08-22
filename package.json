@@ -1,6 +1,6 @@
 {
   "name": "@riotjs/parcel-transformer-riot",
-  "version": "9.0.2",
+  "version": "10.0.0",
   "description": "The Riot.js official parcel transformer",
   "main": "index.js",
   "scripts": {
